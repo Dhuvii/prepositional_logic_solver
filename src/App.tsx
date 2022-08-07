@@ -169,7 +169,7 @@ function App() {
         )}
 
         {/* keypad */}
-        <div className="w-full mt-5 grid grid-cols-3 items-center justify-center md:flex md:items-start md:justify-between gap-5 flex-wrap">
+        <div className="w-full mt-5 grid grid-cols-3 items-center justify-center sm:flex sm:items-start sm:justify-between gap-5 flex-wrap">
           <Button
             onClick={(e: any) => {
               handleOperatorInput("( ");
@@ -255,6 +255,70 @@ function App() {
             )
           </Button>
         </div>
+
+        {/* description */}
+        {!expression && (
+          <div className="mt-5 p-3 bg-gray-50 border rounded-lg">
+            <ul className="list-disc list-inside">
+              <li className="w-full max-w-sm text-sm text-gray-500 italic leading-relaxed">
+                ex:{" "}
+                <span className="not-italic bg-gray-200 rounded-md px-1 py-0.5 text-gray-800">
+                  (P → Q) ∧ S
+                </span>
+              </li>
+              <li className="w-full max-w-sm mt-2 text-sm text-gray-500 italic leading-relaxed">
+                <span className="mr-2 not-italic bg-gray-200 rounded-md px-1 py-0.5 text-gray-800">
+                  {"-->"}
+                </span>
+                is for
+                <span className="mx-2 not-italic bg-gray-200 rounded-md px-1 py-0.5 text-gray-800">
+                  {"→"}
+                </span>
+                (implification)
+              </li>
+              <li className="w-full max-w-sm mt-2 text-sm text-gray-500 italic leading-relaxed">
+                <span className="mr-2 not-italic bg-gray-200 rounded-md px-1 py-0.5 text-gray-800">
+                  {"<-->"}
+                </span>
+                is for
+                <span className="mx-2 not-italic bg-gray-200 rounded-md px-1 py-0.5 text-gray-800">
+                  {"↔"}
+                </span>
+                (bi-conditional)
+              </li>
+              <li className="w-full max-w-sm mt-2 text-sm text-gray-500 italic leading-relaxed">
+                <span className="mr-2 not-italic bg-gray-200 rounded-md px-1 py-0.5 text-gray-800">
+                  {"&"}
+                </span>
+                is for
+                <span className="mx-2 not-italic bg-gray-200 rounded-md px-1 py-0.5 text-gray-800">
+                  {"∧"}
+                </span>
+                (conjunction)
+              </li>
+              <li className="w-full max-w-sm mt-2 text-sm text-gray-500 italic leading-relaxed">
+                <span className="mr-2 not-italic bg-gray-200 rounded-md px-1 py-0.5 text-gray-800">
+                  {"|"}
+                </span>
+                is for
+                <span className="mx-2 not-italic bg-gray-200 rounded-md px-1 py-0.5 text-gray-800">
+                  {"∨"}
+                </span>
+                (disjunction)
+              </li>
+              <li className="w-full max-w-sm mt-2 text-sm text-gray-500 italic leading-relaxed">
+                <span className="mr-2 not-italic bg-gray-200 rounded-md px-1 py-0.5 text-gray-800">
+                  {"+"}
+                </span>
+                is for
+                <span className="mx-2 not-italic bg-gray-200 rounded-md px-1 py-0.5 text-gray-800">
+                  {"⊕"}
+                </span>
+                (implicit OR)
+              </li>
+            </ul>
+          </div>
+        )}
 
         {expression && (
           <div className="mt-5 w-full flex flex-col items-center justify-center">
