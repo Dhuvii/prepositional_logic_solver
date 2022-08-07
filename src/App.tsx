@@ -178,6 +178,13 @@ function App() {
             (
           </Button>
           <Button
+            onClick={(e: any) => {
+              handleOperatorInput("!");
+            }}
+          >
+            {replacer("!")}
+          </Button>
+          <Button
             onClick={() => {
               handleOperatorInput("P");
             }}
@@ -190,6 +197,20 @@ function App() {
             }}
           >
             Q
+          </Button>
+          <Button
+            onClick={() => {
+              handleOperatorInput("R");
+            }}
+          >
+            R
+          </Button>
+          <Button
+            onClick={() => {
+              handleOperatorInput("S");
+            }}
+          >
+            S
           </Button>
           <Button
             onClick={() => {
