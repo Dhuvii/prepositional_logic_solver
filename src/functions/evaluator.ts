@@ -65,6 +65,10 @@ export class Evaluator {
       "result",
     ];
 
+    if (this.keys.find((v) => v === this.expression.toUpperCase())) {
+      this.keys = this.keys.filter((k) => k !== this.expression.toUpperCase());
+    }
+
     return this.generateTable(obj);
   }
 
@@ -157,7 +161,6 @@ export class Evaluator {
   genGrayCode(untransformed: boolean = false) {
     let output: any = {};
     let rows = Math.pow(2, this.variables.length);
-
     let flipIn = rows / 2;
 
     for (let j = 0; j < this.variables.length; j++) {

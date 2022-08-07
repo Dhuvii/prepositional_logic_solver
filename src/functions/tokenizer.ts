@@ -28,7 +28,7 @@ export class Tokenizer {
   }
 
   scan() {
-    if (this.expression.length < 3) throw Error("Invalid expression");
+    if (this.expression.length < 2) throw Error("Invalid expression");
     while (this.counter < this.expression.length) {
       if (isSpecial(this.currentCharacter())) {
         this.hasSpace = true;
