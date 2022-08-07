@@ -56,6 +56,14 @@ function App() {
     setExpression(replaceOriginal(currentExpression));
   };
 
+  const handleReset = () => {
+    setError("");
+    setExpression("");
+    setCurrentExpression("");
+    setDatas([]);
+    setHeadings([]);
+  };
+
   const handleOperatorInput = (ch: string) => {
     setCurrentExpression((pv: string) => (pv += ch));
     if (inputRef && inputRef.current) {
@@ -132,13 +140,27 @@ function App() {
             </label>
           </div>
 
-          <button
-            onClick={handleSubmit}
-            type="button"
-            className="w-full md:w-auto focus:outline-none text-white bg-green-700 hover:bg-green-800 focus-visible:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-3.5"
-          >
-            Compute
-          </button>
+          <div className="w-full md:w-auto flex items-center justify-between gap-5">
+            <button
+              onClick={handleSubmit}
+              type="button"
+              className="w-full md:w-auto focus:outline-none text-white bg-green-700 hover:bg-green-800 focus-visible:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-3.5"
+            >
+              Compute
+            </button>
+
+            {datas.length > 0 && (
+              <>
+                <button
+                  onClick={handleReset}
+                  type="button"
+                  className="w-auto focus:outline-none text-gray-800 bg-gray-300 hover:bg-gray-400 focus-visible:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-3.5"
+                >
+                  Reset
+                </button>
+              </>
+            )}
+          </div>
         </form>
         {error && (
           <p className="mt-1  w-full block text-left text-xs text-red-600">
