@@ -258,7 +258,7 @@ function App() {
 
         {/* description */}
         {!expression && (
-          <div className="mt-5 p-3 bg-gray-50 border rounded-lg">
+          <div className="w-full sm:w-auto mt-5 p-3 bg-gray-50 border rounded-lg">
             <ul className="list-disc list-inside">
               <li className="w-full max-w-sm text-sm text-gray-500 italic leading-relaxed">
                 ex:{" "}
