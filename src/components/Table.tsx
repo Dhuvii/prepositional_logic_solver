@@ -8,8 +8,8 @@ const Table = ({
   datas: any[];
 }) => {
   return (
-    <div className="w-full max-h-[30rem] relative overflow-x-auto shadow-md sm:rounded-lg">
-      <table className="w-full  overflow-auto text-sm text-left text-gray-500">
+    <div className="w-full h-full overflow-x-auto relative shadow-md rounded-lg">
+      <table className="w-full h-full overflow-y-auto text-sm text-left text-gray-500 rounded-lg">
         <thead className="text-xs text-white bg-gray-800">
           <tr>
             {headings.map((heading, idx) => (
@@ -23,7 +23,7 @@ const Table = ({
             ))}
           </tr>
         </thead>
-        <tbody className="overflow-auto">
+        <tbody className="">
           {datas.map((data, idx) => (
             <tr key={idx} className="bg-white border-b">
               {Object.keys(data).map((key, idx) => (

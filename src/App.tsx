@@ -65,8 +65,8 @@ function App() {
   };
 
   return (
-    <div className="w-full h-screen p-10 flex-col flex items-center justify-center">
-      <div className="p-5 w-full max-h-[45rem] md:w-auto md:min-w-[32rem] max-w-7xl rounded-xl bg-gray-50/10 border flex flex-col items-center justify-start">
+    <div className="w-full h-full min-h-screen p-3 md:p-10 flex-col flex items-center justify-center">
+      <div className="p-5 w-full md:w-auto md:min-w-[32rem] max-w-7xl rounded-xl bg-gray-50/10 border flex flex-col items-center justify-start">
         <form
           onSubmit={handleSubmit}
           className="w-full flex md:flex-row flex-col items-center justify-between gap-5"
@@ -147,7 +147,7 @@ function App() {
         )}
 
         {/* keypad */}
-        <div className="w-full mt-5 flex items-start justify-start gap-5 flex-wrap">
+        <div className="w-full mt-5 grid grid-cols-3 items-center justify-center md:flex md:items-start md:justify-between gap-5 flex-wrap">
           <Button
             onClick={(e: any) => {
               handleOperatorInput("( ");
@@ -214,13 +214,11 @@ function App() {
         </div>
 
         {expression && (
-          <div className="my-5 w-full flex flex-col items-center justify-center">
-            <h1 className="mb-3 text-2xl font-bold tracking-wider text-gray-800">
+          <div className="mt-5 w-full flex flex-col items-center justify-center">
+            <h1 className="mb-3 text-base md:text-2xl font-bold tracking-wider text-gray-800">
               {replacer(expression)}
             </h1>
-            <div className="w-full h-full">
-              <Table headings={headings} datas={datas} />
-            </div>
+            <Table headings={headings} datas={datas} />
           </div>
         )}
       </div>
