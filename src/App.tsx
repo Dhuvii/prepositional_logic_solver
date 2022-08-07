@@ -327,7 +327,7 @@ function App() {
                 <span className="mx-2 not-italic bg-gray-200 rounded-md px-1 py-0.5 text-gray-800">
                   {"⊕"}
                 </span>
-                (implicit OR)
+                (exclusive OR)
               </li>
             </ul>
           </div>
