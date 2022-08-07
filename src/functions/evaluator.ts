@@ -109,8 +109,12 @@ export class Evaluator {
     }
 
     if (root.action === "negation") {
-      this.negations.add(root.args[0]);
-      return !combinations_per_row[root.args[0]];
+      if (typeof root.args[0] === "object") {
+        return !this._process(root.args[0], combinations_per_row);
+      } else {
+        this.negations.add(root.args[0]);
+        return !combinations_per_row[root.args[0]];
+      }
     }
 
     if (root.action === "conjunction") {
