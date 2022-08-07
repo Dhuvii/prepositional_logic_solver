@@ -291,7 +291,7 @@ function App() {
               </li>
               <li className="w-full max-w-sm mt-2 text-sm text-gray-500 italic leading-relaxed">
                 <span className="mr-2 not-italic bg-gray-200 rounded-md px-1 py-0.5 text-gray-800">
-                  {"<-->"}
+                  {"<->"}
                 </span>
                 is for
                 <span className="mx-2 not-italic bg-gray-200 rounded-md px-1 py-0.5 text-gray-800">
