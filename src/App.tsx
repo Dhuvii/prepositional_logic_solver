@@ -74,6 +74,19 @@ function App() {
 
   return (
     <div className="w-full h-full min-h-screen p-3 md:p-10 flex-col flex items-center justify-center">
+      <div className="w-full mb-10 max-w-xl">
+        <h1 className="w-full block text-center text-xl sm:text-4xl font-bold text-gray-800">
+          Prepositional Truth Table Generator
+        </h1>
+        <h3 className="mt-3 text-xs sm:text-base text-center tracking-wide text-gray-600">
+          This represents of all the combinations of values for inputs and their
+          corresponding outputs.
+        </h3>
+        <h3 className="mt-2 text-xs sm:text-base text-center tracking-wide text-gray-600">
+          உள்ளீடுகள் மற்றும் அவற்றின் தொடர்புடைய வெளியீடுகளுக்கான மதிப்புக்களின்
+          அனைத்து சேர்க்கைகளையும் இவ் அட்டவணைப் பிரதிநிதித்துவமாக்கும்.
+        </h3>
+      </div>
       <div className="p-5 w-full md:w-auto md:min-w-[32rem] max-w-7xl rounded-xl bg-gray-50/10 border flex flex-col items-center justify-start">
         <form
           onSubmit={handleSubmit}
