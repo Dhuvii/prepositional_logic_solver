@@ -30,6 +30,7 @@ function App() {
         if (datas && heading) {
           setDatas(datas);
           setHeadings(heading.map((h) => replacer(h)));
+          console.log({ datas, heading });
         }
       }
     } catch (error: any) {

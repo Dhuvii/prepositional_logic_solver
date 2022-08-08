@@ -8,9 +8,9 @@ const Table = ({
   datas: any[];
 }) => {
   return (
-    <div className="w-full h-full overflow-x-auto relative shadow-md rounded-lg">
+    <div className="w-full h-full max-h-[20rem] overflow-x-auto relative shadow-md rounded-lg">
       <table className="w-full h-full overflow-y-auto text-sm text-left text-gray-500 rounded-lg">
-        <thead className="text-xs text-white bg-gray-800">
+        <thead className="text-xs sticky top-0 text-white bg-gray-800">
           <tr>
             {headings.map((heading, idx) => (
               <th
