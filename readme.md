@@ -1,4 +1,4 @@
-## UPDATES
+## FUTURE UPDATES
 
 - Tautology Contrapositive Contigency
 - Undo Redo
