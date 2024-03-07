@@ -31,8 +31,7 @@ const Table = ({
                   key={idx}
                   className={`${
                     data[key].class && data[key].class
-                  } px-6 py-4 text-center border-r
-                                } `}
+                  } px-6 py-4 text-center border-r} `}
                 >
                   {data[key].badge ? (
                     <span
